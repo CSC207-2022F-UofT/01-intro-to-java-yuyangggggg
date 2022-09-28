@@ -149,9 +149,7 @@ public class Basics {
         for (String word : parts)       {
             StringBuilder newWord = new StringBuilder(word);
             ret.append(newWord);
-            System.out.println(ret);
         }
-
         return ret.toString();
     }
 
@@ -181,7 +179,6 @@ public class Basics {
         int arrayLength = arr.length;
         for(int i = 0; i < arrayLength + 1;) {
             current_sum += arr[i];
-            System.out.println(current_sum);
             i += 1;
         }
         return current_sum;
