@@ -99,10 +99,9 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
-        for (int i = 0; i < 11; i++) {
+        for (int i = 10; i > 0; i--) {
             System.out.println("Current count: " + i);
         }
-
     }
 
     /**
@@ -146,9 +145,8 @@ public class Basics {
 
         // Fill in the rest of the body here
         String[] parts = to_split.split(" ");
-        for (String word : parts)       {
-            StringBuilder newWord = new StringBuilder(word);
-            ret.append(newWord);
+        for (String word : parts)      {
+            ret.append(word.charAt(0));
         }
         return ret.toString();
     }
@@ -177,10 +175,12 @@ public class Basics {
          *                (e.g. arr[i] gives you the item at index i).
          */
         int arrayLength = arr.length;
-        for(int i = 0; i < arrayLength + 1;) {
-            current_sum += arr[i];
+        for(int i = 0; i < arrayLength;) {
+            if(i % 2 != 0) {
+                current_sum += arr[i];
+            }
             i += 1;
-        }
+       }
         return current_sum;
     }
 
